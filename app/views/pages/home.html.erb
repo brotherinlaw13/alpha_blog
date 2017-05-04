@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+  table, tr, td {
+    border-collapse: collapse;
+    margin: 5px;
+    padding: 5px;
+  }
+.left {
+  border-right:1px solid black; 
+  padding-right: 30px
+}
+
+.right {
+  padding-left: 30px;
+}
+
+.menu_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.menu_li {
+    float: left;
+}
+
+.li_a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+</style>
+</head>
+<body>
+<ul class="menu_ul">
+  <li class="menu_li"><a class="li_a" href="/">Home</a></li>
+  <li class="menu_li"><a class="li_a" href="about">About</a></li>
+</ul>
+<br>
+<br>
+<br>
+<div>
+  <h1 style="font-family:verdana;text-align:center">My fake Web Home</h1>
+
+<center><%= image_tag("web-design", height: 540, width: 1440) %></center>
+</div>
+<br>
+<hr>
+<br>
+<center>
+<table>
+  <tr style="font-size: 30px">
+    <td class="left">This is my first paragraph</td>
+    <td class="right">This is the second one</td>
+  </tr>
+  <tr>
+    <td class="left">Stupid information about paragraph one.</td>
+    <td class="right">Stupid information about paragraph two.</td>
+  </tr>
+</table>
+</center>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+<footer>
+  <p>Stupid footer to add info about me.
+</footer>
+</html>
