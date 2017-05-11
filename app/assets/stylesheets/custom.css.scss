@@ -1,2 +1,50 @@
+$navbar-default-bg: #bdbdbd;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #2196f3;
+/*  text-transform: uppercase;*/
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover{
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.center {
+  text-align:center;
+}
+
+#home-jumbotron {
+  background-image: asset-url("gray-way-vector.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+#home-jumbotron h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+.btn-xlarge {
+  font-size: 1.7em;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top:1px solid #eaeaea;
+  color: #777;
+}
+
+footer small {
+  float:left;
+}
