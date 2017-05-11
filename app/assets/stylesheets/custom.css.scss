@@ -22,12 +22,15 @@ $navbar-default-bg: #bdbdbd;
 }
 
 #home-jumbotron {
-  background-image: asset-url("gray-way-vector.png");
+  background-color : transparent;
   background-size: cover;
   background-repeat: no-repeat;
   height: 700px;
 }
-
+#super-body {
+  background-image: asset-url("gray-way-vector.png");
+  background-repeat: no-repeat
+}
 #home-jumbotron h1 {
   text-align: center;
   margin-bottom: 30px;
