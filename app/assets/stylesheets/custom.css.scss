@@ -29,7 +29,8 @@ $navbar-default-bg: #bdbdbd;
 }
 #super-body {
   background-image: asset-url("gray-way-vector.png");
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   
 }
 #home-jumbotron h1 {
