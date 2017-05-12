@@ -42,13 +42,19 @@ $navbar-default-bg: #bdbdbd;
   font-size: 1.7em;
 }
 
+.article-meta-details{
+  border-top: 1px solid #eaeaea;
+  margin-top: 16px;
+
+}
+
 .article-actions{
-  border-top:1px solid #eaeaea;
-  padding-top:5px;
+ /* border-top:1px solid #eaeaea;
+  padding-top:5px;*/
 }
 
 .description{
-  margin-top: 0px
+  margin-top: 8px
 }
 
 .article-title{
@@ -62,6 +68,7 @@ $navbar-default-bg: #bdbdbd;
   padding-bottom: 16px;
 
 }
+
 
 
 
