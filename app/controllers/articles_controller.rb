@@ -15,6 +15,17 @@ class ArticlesController < ApplicationController
     def edit
   end
 
+    def create
+    debugger
+    @article = Article.new(article_params)
+    @article.user = User.first
+    if @article.save
+      flash[:success] = "Article was succesfully created"
+      redirect_to article_path(@article)
+    else
+      render "new"
+    end
+
   def update
     if @article.update(article_params)
       flash[:success] = "Article was succesfully updated"
@@ -23,15 +34,6 @@ class ArticlesController < ApplicationController
       render "edit"
     end
   end
-
-  def create
-    @article = Article.new(article_params)
-    if @article.save
-      flash[:success] = "Article was succesfully created"
-      redirect_to article_path(@article)
-    else
-      render "new"
-    end
 
   end
 
