@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
 
     if session[:user_id] != nil
-      @article.user = User.find(session[:user_id])
+      @article.user = current_user
       if @article.save
         flash[:success] = "Article was succesfully created"
         redirect_to article_path(@article)   
