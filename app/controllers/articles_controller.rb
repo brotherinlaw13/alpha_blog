@@ -4,21 +4,18 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
   def index  
     @articles = Article.paginate(page: params[:page], per_page: 10, ).order('id DESC')
-
   end
 
 
   def new
-      @article = Article.new
+    @article = Article.new
   end
 
-    def edit
+  def edit
   end
 
-    def create
+  def create
     @article = Article.new(article_params)
-
-
     if session[:user_id] != nil
       @article.user = current_user
       if @article.save
@@ -26,15 +23,12 @@ class ArticlesController < ApplicationController
         redirect_to article_path(@article)   
       else
       render "new"
-    end
-
+      end
     else
       flash.now[:danger] = "You are not logged in"
       render "new"
     end
-
-
-
+  end
 
   def update
     if @article.update(article_params)
@@ -43,8 +37,6 @@ class ArticlesController < ApplicationController
     else
       render "edit"
     end
-  end
-
   end
 
   def show
@@ -67,10 +59,10 @@ class ArticlesController < ApplicationController
     end
 
     def require_same_user
-      if current_user != @article.user
+      if current_user != @article.user and !current_user.admin?
         flash[:danger] = "You can only edit or delete your own articles"
         redirect_to root_path
       end
     end
-
 end
+
